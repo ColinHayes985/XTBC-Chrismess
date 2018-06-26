@@ -14,8 +14,10 @@
 *When the form is _submitted_, udpdate the heading with the text you put in the text input.
 
 ###Super Mega Bonus Credit Hyper Fighting
-*Make sureit works when you press _enter_ on the keyboard, not just when you hit the button.
+*Make sure it works when you press _enter_ on the keyboard, not just when you hit the button.
+
 =======================================
+
 ##Day 2 Homework
 
 *Give the function changeHeading a better name
