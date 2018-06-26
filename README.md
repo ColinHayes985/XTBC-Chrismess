@@ -15,3 +15,20 @@
 
 ###Super Mega Bonus Credit Hyper Fighting
 *Make sureit works when you press _enter_ on the keyboard, not just when you hit the button.
+=======================================
+##Day 2 Homework
+
+*Give the function changeHeading a better name
+*Add another field to the form
+*Display inputs to that field in the list
+
+###Bonus Credit
+
+*Diplay the second field in a seperate HTML element than the movie name
+*Try to style them differently
+
+###Super Mega Bonus Credit
+*Break changeHeading into multiple functions
+
+###Super Mega Bonus Credit Hyper Fighting
+*Make sureit works when you press _enter_ on the keyboard, not just when you hit the button.
