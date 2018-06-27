@@ -24,4 +24,4 @@ function updateHeading(ev){
 
 button.addEventListener('click', changeHeading);
 bonusButton.addEventListener('click', changeHeading2);
-form.addEventListener('submit', updateHeading);
+form.addEventListener('submit', updateHeading); 
