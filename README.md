@@ -47,4 +47,4 @@
 
 ###Super Mega Bonus Credit Hyper Fighting
 *Add a favorite button that lets you mark your favorites and display them differently.
-*Record favorites in array differently.
+*Record favorites in array differently. 
