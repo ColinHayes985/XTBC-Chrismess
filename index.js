@@ -12,16 +12,26 @@ function changeHeading2(){
     bonusHeading.textContent='Chris'
 }
 
-function updateHeading(ev){
+function listItems(ev){
     ev.preventDefault();
-    const input=ev.target.filmName.value;
+    const film=ev.target.filmName.value;
     const movie=document.createElement('li');
-    movie.textContent=input;
+    movie.textContent=film;
     const filmList=document.querySelector('#films');
     filmList.appendChild(movie);
+    listChris(ev);
+    ev.target.reset();
+}
+function listChris(ev){
+    ev.preventDefault();
+    const chris=ev.target.chrisName.value;
+    const name=document.createElement('li')
+    name.textContent='Chris '+chris
+    const chrisList=document.querySelector('#films')
+    chrisList.appendChild(name);
     ev.target.reset();
 }
 
 button.addEventListener('click', changeHeading);
 bonusButton.addEventListener('click', changeHeading2);
-form.addEventListener('submit', updateHeading); 
+form.addEventListener('submit', listItems); 
