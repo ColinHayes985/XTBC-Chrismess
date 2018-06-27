@@ -32,5 +32,19 @@
 ###Super Mega Bonus Credit
 *Break changeHeading into multiple functions
 
+=======================================
+
+##Day 3 Homework
+
+*In adddition to building list item and adding to DOM, also store each spell in an array of flick items.
+
+###Bonus Credit
+
+*Add delete button to each list ite that will remove it from the list...
+
+###Super Mega Bonus Credit
+*and the array
+
 ###Super Mega Bonus Credit Hyper Fighting
-*Make sureit works when you press _enter_ on the keyboard, not just when you hit the button.
+*Add a favorite button that lets you mark your favorites and display them differently.
+*Record favorites in array differently.
