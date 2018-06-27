@@ -19,7 +19,7 @@ function updateHeading(ev){
     movie.textContent=input;
     const filmList=document.querySelector('#films');
     filmList.appendChild(movie);
-    ev.target.reset;
+    ev.target.reset();
 }
 
 button.addEventListener('click', changeHeading);
