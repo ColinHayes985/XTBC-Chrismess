@@ -16,7 +16,7 @@ function updateHeading(ev){
     ev.preventDefault();
     const input=ev.target.filmName.value;
     const filmList=document.querySelector('#films');
-    filmList.textContent+= ' '+input;
+    filmList.innerHTML+='<p>${input};</p>'
 }
 
 button.addEventListener('click', changeHeading)
