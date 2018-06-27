@@ -2,7 +2,7 @@ const button=document.querySelector('button')
 const bonusButton=document.querySelector('button.bonusCredit')
 const heading=document.querySelector('h1')
 const bonusHeading=document.querySelector('h1.bonusCredit')
-const form=document.querySelector('#movieForm')
+const form=document.querySelector('#filmForm')
 
 function changeHeading(){
     heading.textContent='Clicked'
@@ -14,8 +14,9 @@ function changeHeading2(){
 
 function updateHeading(ev){
     ev.preventDefault();
-    const input=ev.target.movie.value;
-    heading.textContent=input
+    const input=ev.target.filmName.value;
+    const filmList=document.querySelector('#films');
+    filmList.textContent+= ' '+input;
 }
 
 button.addEventListener('click', changeHeading)
