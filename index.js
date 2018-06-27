@@ -15,11 +15,13 @@ function changeHeading2(){
 function updateHeading(ev){
     ev.preventDefault();
     const input=ev.target.filmName.value;
+    const movie=document.createElement('li');
+    movie.textContent=input;
     const filmList=document.querySelector('#films');
-    filmList.innerHTML+=`<li>${input}</li>`
+    filmList.appendChild(movie);
     ev.target.reset;
 }
 
-button.addEventListener('click', changeHeading)
-bonusButton.addEventListener('click', changeHeading2)
-form.addEventListener('submit', updateHeading)
+button.addEventListener('click', changeHeading);
+bonusButton.addEventListener('click', changeHeading2);
+form.addEventListener('submit', updateHeading);
