@@ -16,7 +16,7 @@ function updateHeading(ev){
     ev.preventDefault();
     const input=ev.target.filmName.value;
     const filmList=document.querySelector('#films');
-    filmList.innerHTML+=`<p>${input}</p>`
+    filmList.innerHTML+=`<li>${input}</li>`
     ev.target.reset;
 }
 
