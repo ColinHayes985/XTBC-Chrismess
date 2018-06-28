@@ -40,7 +40,7 @@
 
 ###Bonus Credit
 
-*Add delete button to each list ite that will remove it from the list...
+*Add delete button to each list item that will remove it from the list...
 
 ###Super Mega Bonus Credit
 *and the array

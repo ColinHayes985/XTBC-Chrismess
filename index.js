@@ -4,7 +4,8 @@ const heading=document.querySelector('h1');
 const bonusHeading=document.querySelector('h1.bonusCredit');
 const listItem=document.querySelector('#filmForm');
 const field=document.getElementsByName('filmName');
-
+var movieArr=[];
+var chrisArr=[];
 
 function changeHeading(){
     heading.textContent='Clicked'
@@ -29,6 +30,8 @@ function parseListItem(ev){
     const chris=ev.target.chrisName.value;
     if (chris!=''){
         item=film+' starring Chris '+chris
+        chrisArr.push(chris);
+        console.log(chrisArr)
     }
     else{
         item=film
@@ -37,13 +40,25 @@ function parseListItem(ev){
 
 }
 function checkFieldContent(ev,item){
-    console.log(item.textContent)
     if(item.textContent==''){
         alert("Please enter a movie name")
         return false;
     }
     else{
+        itemArr=item.textContent.split(" ");
+        var i=0;
+        var flickName;
+        length=itemArr.length;
+        while(itemArr[i]!='starring'&&i<length){
+            flickName+=itemArr[i];
+            flickName+=' '
+            i++;
+        }
+        movieArr.push(flickName);
+        console.log(movieArr)
         return true;
+        
+
     }
 }
 
