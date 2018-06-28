@@ -46,14 +46,35 @@ function parseListItem(ev){
         else{filmArr.push(film)}
         //Check for Chris and add to chris arr
         if (chris!=''){
-            item=film+' starring Chris '+chris
+            var chrisses=chris.split(' ')
+            console.log (chrisses)
+            item=film+' starring '
+            for(var i=0; i<chrisses.length; i++){
+                
+                item+='Chris '
+                item+=chrisses[i]
+                
+                if(i==chrisses.length-2){
+                    item+=' and '
+                }
+
+                else if (chrisses.length>2&&i<chrisses.length-1){
+                    item+=', '
+                }
+                
+                
+            }
             if(document.getElementById('faveYes').checked){
-                chrisArr.push('***'+chris+'***');
+                for(var i=0; i<chrisses.length; i++){
+                    chrisArr.push('***'+chrisses[i]+'***');
+                }
                 itemArr.push('***'+item+'***')
                 item='***'+item+'***'
             }
             else{
-                chrisArr.push(chris)
+                for(var i=0; i<chrisses.length; i++){
+                    chrisArr.push(chrisses[i])
+                }
                 itemArr.push(item)
             }
             return item
