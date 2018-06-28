@@ -92,6 +92,7 @@ function parseListItem(ev){
     return '';
 
 }
+
 function checkFieldContent(ev,item){
     if(item.textContent==''){
         alert("Please enter a movie name")
