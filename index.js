@@ -49,9 +49,13 @@ function parseListItem(ev){
                 item+='Chris '
                 item+=chrisses[i]
                 
-                if(i==chrisses.length-2){
+                if(i==chrisses.length-2 && chrisses.length==2){
                     item+=' and '
                 }
+                if(i==chrisses.length-2 && chrisses.length>2){
+                    item+=', and '
+                }
+
 
                 else if (chrisses.length>2&&i<chrisses.length-1){
                     item+=', '
