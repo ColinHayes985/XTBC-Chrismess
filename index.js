@@ -18,10 +18,11 @@ function listItems(ev){
     ev.preventDefault();
     const item=document.createElement('li');
     item.textContent=parseListItem(ev);
-    const filmList=document.querySelector('#films');
-    filmList.appendChild(item);
-    ev.target.reset();
-    focus()
+    if(checkFieldContent(ev,item)==true){
+        const filmList=document.querySelector('#films');
+        filmList.appendChild(item);
+        ev.target.reset();
+    }
 }
 function parseListItem(ev){
     const film=ev.target.filmName.value;
@@ -34,6 +35,16 @@ function parseListItem(ev){
     }
     return item;
 
+}
+function checkFieldContent(ev,item){
+    console.log(item.textContent)
+    if(item.textContent==''){
+        alert("Please enter a movie name")
+        return false;
+    }
+    else{
+        return true;
+    }
 }
 
 
