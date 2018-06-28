@@ -4,6 +4,8 @@ var filmArr=[];
 var chrisArr=[];
 var itemArr=[];
 
+//TODO:Day 3 Refactor
+//TODO:Replace '==' with '==='
 
 
 function listItems(ev){
@@ -25,6 +27,9 @@ function listItems(ev){
         
     }
 }
+
+//VVVHandles creation of string to put in listVVV\\
+//TODO:Split Up?
 function parseListItem(ev){
     const film=ev.target.filmName.value;
     const chris=ev.target.chrisName.value;
@@ -83,6 +88,7 @@ function parseListItem(ev){
 
 }
 
+//VVVCheck to make sure there is a movie present in the fieldVVV\\
 function checkFieldContent(ev,item){
     if(item.textContent==''){
         alert("Please enter a movie name")
