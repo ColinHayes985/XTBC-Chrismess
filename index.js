@@ -36,33 +36,19 @@ function parseListItem(ev){
         if(film!=''){
             filmArr.push(film)
         }
+        //Look into double name but not double movie
         item=film
     }
     return item;
 
 }
 function checkFieldContent(ev,item){
-    console.log(filmArr)
-    console.log(chrisArr)
     if(item.textContent==''){
         alert("Please enter a movie name")
         return false;
     }
     else{
-        /*itemArr=item.textContent.split(" ");
-        var i=0;
-        var flickName;
-        length=itemArr.length;
-        while(itemArr[i]!='starring'&&i<length){
-            flickName+=itemArr[i];
-            flickName+=' '
-            i++;
-        }
-        movieArr.push(flickName);
-        console.log(movieArr)*/
         return true;
-        
-
     }
 }
 
