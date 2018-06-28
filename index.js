@@ -20,26 +20,34 @@ function listItems(ev){
     const item=document.createElement('li');
     item.textContent=parseListItem(ev);
     if(checkFieldContent(ev,item)==true){
+        //if(fave=='yes'){
+        //    item.style.color('Red')
+        //}
         const filmList=document.querySelector('#films');
         filmList.appendChild(item);
         ev.target.reset();
+        console.log(chrisArr)
+        console.log(filmArr)
+        ev.target.filmName.focus();
+        //console.log(fave)
     }
 }
 function parseListItem(ev){
     const film=ev.target.filmName.value;
     const chris=ev.target.chrisName.value;
-    if (chris!=''){
-        item=film+' starring Chris '+chris
-        chrisArr.push(chris);
-    }
-    else{
-        if(film!=''){
-            filmArr.push(film)
+    if(film!=''){
+        filmArr.push(film)
+        if (chris!=''){
+            item=film+' starring Chris '+chris
+            chrisArr.push(chris);
+            return item
         }
-        //Look into double name but not double movie
-        item=film
+        else {
+            item=film
+            return item
+        }
     }
-    return item;
+    return '';
 
 }
 function checkFieldContent(ev,item){
