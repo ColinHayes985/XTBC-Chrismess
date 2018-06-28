@@ -1,22 +1,39 @@
-@import url('https://fonts.googleapis.com/css?family=Bangers|Changa|IM+Fell+Great+Primer+SC|Press+Start+2P');
+@import url('https://fonts.googleapis.com/css?family=Bangers|Changa|IM+Fell+Great+Primer+SC|Press+Start+2P|Aldrich|Black+Ops+One|Cinzel+Decorative|Michroma|Orbitron|Oswald|Teko');
 
 body{
-    font-family: 'Bangers', 'Press+Start+2P', Arial, Helvetica, sans-serif;
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
     color: rgb(255, 255, 255);
-    text-shadow: 
+    /*text-shadow: 
         1px -1px 0 #000,
         1px -1px 0 #000,
         -1px 1px 0 #000,
-        1px 1px 0 #000;
+        1px 1px 0 #000;*/
     background-image: url("Chris Licitra.jpg");
     background-color: rgba(102, 102, 102, 0.322);
     background-repeat: no-repeat;
     background-position: center;
+    background-position: top;
     text-align: center;
-
+    padding-top: 0px
 } 
+header{
+    padding-top: 225px;
+    font-weight: 100;
+}
+form{
+    padding-top: 0px;
+    color: #000
+}
 p {
+    color: rgb(0, 0, 0);
     font-family: 'Courier New', Courier, monospace;
-    font-size: 10px;
-    margin: 0px
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0px;
+    
+    
+    
+}
+ul{
+    text-align: left
 }
