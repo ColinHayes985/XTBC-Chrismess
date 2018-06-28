@@ -26,10 +26,11 @@ function listItems(ev){
         }
         const filmList=document.querySelector('#films');
         filmList.appendChild(item);
-        console.log(document.getElementById('faveYes').value)
+        //console.log(document.getElementById('faveYes').value)
         ev.target.reset();
         console.log(chrisArr)
         console.log(filmArr)
+        console.log(itemArr)
         ev.target.filmName.focus();
         
     }
@@ -38,20 +39,32 @@ function parseListItem(ev){
     const film=ev.target.filmName.value;
     const chris=ev.target.chrisName.value;
     if(film!=''){
+        //Check for favorite and add to film arr
         if(document.getElementById('faveYes').checked){
-            filmArr.push('*'+film+'*')
+            filmArr.push('***'+film+'***')
         }
         else{filmArr.push(film)}
+        //Check for Chris and add to chris arr
         if (chris!=''){
             item=film+' starring Chris '+chris
             if(document.getElementById('faveYes').checked){
-                chrisArr.push('*'+chris+'*');
+                chrisArr.push('***'+chris+'***');
+                itemArr.push('***'+item+'***')
+                item='***'+item+'***'
             }
-            else{chrisArr.push(chris)}
+            else{
+                chrisArr.push(chris)
+                itemArr.push(item)
+            }
             return item
         }
         else {
             item=film
+            if(document.getElementById('faveYes').checked){
+                itemArr.push('***'+item+'***')
+                item='***'+item+'***'
+            }
+            else{itemArr.push(item)}
             return item
         }
     }
