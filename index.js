@@ -1,8 +1,9 @@
 const button=document.querySelector('button')
-const bonusButton=document.querySelector('button.bonusCredit')
-const heading=document.querySelector('h1')
-const bonusHeading=document.querySelector('h1.bonusCredit')
-const listItem=document.querySelector('#filmForm')
+const bonusButton=document.querySelector('button.bonusCredit');
+const heading=document.querySelector('h1');
+const bonusHeading=document.querySelector('h1.bonusCredit');
+const listItem=document.querySelector('#filmForm');
+const field=document.getElementsByName('filmName');
 
 
 function changeHeading(){
@@ -15,19 +16,24 @@ function changeHeading2(){
 
 function listItems(ev){
     ev.preventDefault();
-    const film=ev.target.filmName.value;
-    const chris=ev.target.chrisName.value;
-
     const item=document.createElement('li');
-    
-
-    item.textContent=film+' starring Chris '+chris
-
-
-
+    item.textContent=parseListItem(ev);
     const filmList=document.querySelector('#films');
     filmList.appendChild(item);
     ev.target.reset();
+    focus()
+}
+function parseListItem(ev){
+    const film=ev.target.filmName.value;
+    const chris=ev.target.chrisName.value;
+    if (chris!=''){
+        item=film+' starring Chris '+chris
+    }
+    else{
+        item=film
+    }
+    return item;
+
 }
 
 
