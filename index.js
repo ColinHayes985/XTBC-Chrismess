@@ -6,6 +6,7 @@ const listItem=document.querySelector('#filmForm');
 const field=document.getElementsByName('filmName');
 var filmArr=[];
 var chrisArr=[];
+var itemArr=[];
 
 function changeHeading(){
     heading.textContent='Clicked'
@@ -20,26 +21,33 @@ function listItems(ev){
     const item=document.createElement('li');
     item.textContent=parseListItem(ev);
     if(checkFieldContent(ev,item)==true){
-        //if(fave=='yes'){
-        //    item.style.color('Red')
-        //}
+        if(document.getElementById('faveYes').checked){
+           //TODO: Style fave elements on page
+        }
         const filmList=document.querySelector('#films');
         filmList.appendChild(item);
+        console.log(document.getElementById('faveYes').value)
         ev.target.reset();
         console.log(chrisArr)
         console.log(filmArr)
         ev.target.filmName.focus();
-        //console.log(fave)
+        
     }
 }
 function parseListItem(ev){
     const film=ev.target.filmName.value;
     const chris=ev.target.chrisName.value;
     if(film!=''){
-        filmArr.push(film)
+        if(document.getElementById('faveYes').checked){
+            filmArr.push('*'+film+'*')
+        }
+        else{filmArr.push(film)}
         if (chris!=''){
             item=film+' starring Chris '+chris
-            chrisArr.push(chris);
+            if(document.getElementById('faveYes').checked){
+                chrisArr.push('*'+chris+'*');
+            }
+            else{chrisArr.push(chris)}
             return item
         }
         else {
