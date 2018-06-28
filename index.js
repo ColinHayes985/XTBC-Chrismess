@@ -1,20 +1,10 @@
-const button=document.querySelector('button')
-const bonusButton=document.querySelector('button.bonusCredit');
-const heading=document.querySelector('h1');
-const bonusHeading=document.querySelector('h1.bonusCredit');
 const listItem=document.querySelector('#filmForm');
 const field=document.getElementsByName('filmName');
 var filmArr=[];
 var chrisArr=[];
 var itemArr=[];
 
-function changeHeading(){
-    heading.textContent='Clicked'
-}
 
-function changeHeading2(){
-    bonusHeading.textContent='Chris'
-}
 
 function listItems(ev){
     ev.preventDefault();
@@ -103,8 +93,5 @@ function checkFieldContent(ev,item){
     }
 }
 
-
-button.addEventListener('click', changeHeading);
-bonusButton.addEventListener('click', changeHeading2);
 listItem.addEventListener('submit', listItems); 
 
